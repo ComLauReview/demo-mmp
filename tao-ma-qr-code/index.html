@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Create and Download QR Code</title>
+<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+</head>
+<body>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Gabarito&display=swap');
+
+    body{
+      margin: 0;
+      padding: 0;
+      background-color: rgb(150, 255, 129);
+    }
+    
+
+  </style>
+  
+
+
+   <div class="head"
+   >
+   <h2
+   style="font-size: 2.5rem; text-shadow: 0px 5px black; color: rgb(251, 136, 255); font-family:  ' Gabarito', sans-serif; text-align: center;"
+   > MMP Tạo QR điểm danh</h2>
+   </div>
+    
+<h2></h2><li style="text-shadow: 0px 5px black; font-size: 2rem; font-weight: 1000; color: rgb(141, 141, 141);">Cách Tạo QR CODE:<img src="https://emojigraph.org/media/google/avocado_1f951.png" height="50px" alt=""> </h2></li>
+    <div style="text-align:justify">
+<h3><b style="color: red;">Bước 1: </b>Đăng kí Tài Khoản nếu chưa , <a href="https://forms.gle/WYoQHrNgwdTaaYBTA" style="color: rgb(255, 0, 0);">đăng kí tại đây. </a></h3>   
+    
+      <h3><b style="color: red;">Bước 2: </b> Nhận Thông Tin Và Mã ZIPQR</h3>
+     
+      <h3><b style="color: red;">Bước 3: </b> Sao chép ZIPQR và dán vào QRZIPTAG ở dưới</h3>
+    
+      <h3><b style="color: red;">Bước 4: </b> Cuối cùng, nhấn download QR của bạn và sử dụng thôi</h3>
+    </div>
+  <a href="">  <img src="https://o.remove.bg/downloads/02bf144d-4eb4-441f-9341-3b89344bc56d/avocado-clipart-cute-7-removebg-preview.png" height="200px"  style="text-align: right ; float: right;"></a>
+<div style="font-size: 2rem; text-align: center;"> 
+        <label for="qr-text" style="font-size: 30px; font-weight: 900; text-shadow: 0px 2px black; font-family: ' Gabarito', sans-serif; color: rgb(255, 118, 84);">QRZIPTAG TẠO QR ĐIỂM DANH: </label> 
+        <br>
+        <input type="text" id="qr-text" style="height: 30px; width: 300px;">
+               <br> 
+        <button onclick="generateQR()" style="border: none; height: 30px; width: 100px; background-color: cyan; color: rgb(0, 0, 0);">Tạo</button>
+        </div>
+<br><br>
+        <br> 
+        <div style="text-align: center;">
+        <label for="qr-image" style="color:#050505; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  font-size: 2rem; font-weight: 1000; color: crimson;">QR Code Đây Nè: </label>
+         <div id="qr-image" style="text-align: center; justify-content: center;"></div>
+         <br>
+         <br>
+         <img src="https://o.remove.bg/downloads/e027ea07-480a-4a20-8cd3-a25db69cdfc2/f0ad9fd95edcae10cc65220493fd2d21-removebg-preview.png" style="float: left; text-align: left;" height="300px" alt="">
+        <br>
+         
+         <br>
+          <div> 
+            <button onclick="downloadQR()" style="height: 50px;  width: 200px; background-color: aquamarine;">Tải Mã QR</button>
+           </div> 
+          </div>
+        </div> 
+
+
+
+<a href=""></a>
+           <script> 
+           function generateQR()
+        { var qrText = document.getElementById("qr-text").value;
+         var qr = new QRCode(document.getElementById("qr-image"), { width : 200, height : 200 , });
+          qr.makeCode(qrText); }
+          function downloadQR() {
+		var qrImage = document.getElementById("qr-image").getElementsByTagName("img")[0];
+		var downloadLink = document.createElement("a");
+		downloadLink.href = qrImage.src;
+		downloadLink.download = "qr_code.png";
+		document.body.appendChild(downloadLink);
+		downloadLink.click();
+		document.body.removeChild(downloadLink);
+	}
+
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+
+  $(".input_text").focus(function(){
+    $(this).prev('.fa').addclass('glowIcon')
+})
+$(".input_text").focusout(function(){
+    $(this).prev('.fa').removeclass('glowIcon')
+})
+</script>
+
+</body>
+</html>
