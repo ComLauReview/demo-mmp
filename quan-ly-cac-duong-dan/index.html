@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>indexpage</title>
+</head>
+<body>
+    <style>
+#login-form {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+input {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 10px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+    </style>
+    <form id="login-form">
+        <input type="text" id="tk" placeholder="Tên người dùng" required>
+        <input type="password" id="mk" placeholder="Mật khẩu" required>
+        <button type="submit">Đăng nhập</button>
+      </form>
+      
+
+
+      <script>
+  document.getElementById('login-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Ngăn chặn gửi biểu mẫu
+
+  var tk = document.getElementById('tk').value;
+  var mk = document.getElementById('mk').value;
+
+  // Kiểm tra tên người dùng và mật khẩu
+  if (tk === 'shungchingyt' && mk === '@97ShUnGChInG') {
+    alert('Đăng nhập thành công');
+    window.location.href = "https://comlaureview.github.io/demo-mmp/quan-ly-cac-duong-dan/qltkmklink.html"
+    // Thực hiện các hành động tiếp theo sau khi đăng nhập thành công
+  }
+   else {
+    alert('Tên người dùng hoặc mật khẩu không chính xác');
+  }
+});
+      </script>
+</body>
+</html>
