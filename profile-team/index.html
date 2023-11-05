@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Team profile cards</title>
+</head>
+<body>
+ <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: #54677c;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #a4ffac;
+    display: flex;
+    /* Responsive behaviour */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 16px;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15);
+    padding: 16px;
+    margin:  56px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 15px 35px -15px rgba(0, 0, 0, 0.5),
+    0 5px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-image img {
+    width: 100%;
+    transform: scale(1.2);
+}
+
+p {
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.name {
+    margin-top: 80px;
+    font-size: 1.4em;
+    color: #333;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    margin-bottom: 8px;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    margin: 12px 8px;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: opacity 0.4s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button i {
+    color: #fff;
+    font-size: 1.4em;
+}
+
+/* Social media colors */
+button.github {
+    background-color: #24292e;
+} 
+
+button.twitter {
+    background-color: #1da1f2;
+}
+
+button.pinterest {
+    background-color: #d3263a;
+} 
+ </style>
+    <div class="card">
+        <div class="card-image">
+            <img src="https://scontent.fsgn22-1.fna.fbcdn.net/v/t39.30808-6/340639810_1301054983812243_338833034045304283_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=F2JOGOfIsmEAX9hfJxF&_nc_ht=scontent.fsgn22-1.fna&oh=00_AfBVbLfHX0levWKz_fBcaIhWYDmWm3ZuwX3GGKuMBnrlcg&oe=653837C9" alt="Profile image">
+        </div>
+        <p class="name">Phan Hoài Ân</p>
+        <p>FULLSTACK CỦA MMP</p>
+        <p>My Birthday: 01/04/2009 (14tuoi)</p>
+        <p>Có thất bại,có thành công, lấy kinh nghiệm từ việc thất bại để hoàn thiện bản thân.</p>
+        <div class="socials">
+            <a href="https://facebook.com/HoaiAnShungChing"><button class="github"><i class="fab fa-facebook"></i></button></a>
+            
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-image">
+            <img src="https://scontent.fsgn22-1.fna.fbcdn.net/v/t39.30808-6/391675224_729509565858440_7913158700944569902_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=ZemJjkrSqLMAX9Pg6qa&_nc_ht=scontent.fsgn22-1.fna&oh=00_AfCuEzRDs4BFEdAvAZMNLM-m4DE8LYwkcEvzJ7yHjARFzw&oe=65398CE0" alt="Profile image">
+        </div>
+        <p class="name">Huỳnh Thị Yến Nhi</p>
+        <p>API</p>
+        <p>My Birthday: 01/01/2009(14tuoi)</p>
+        <p>Tuổi trẻ cháy hết mình, thắng không kêu ca, thua để học thêm , đáp cánh ước mơ</p>
+        <div class="socials">
+            <a href="https://www.facebook.com/profile.php?id=100075902357288"><button class="github"><i class="fab fa-facebook"></i></button></a>
+        </div>
+    </div>
+
+  
+</body>
+</html>
